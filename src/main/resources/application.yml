@@ -1,0 +1,4 @@
+spring:
+  profiles:
+    active: "local" #set environment variables [ local, dev, stage, prod ]
+name: RedisDemo

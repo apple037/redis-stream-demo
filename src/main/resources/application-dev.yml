@@ -1,0 +1,22 @@
+server:
+  port: 10001
+  servlet:
+      context-path: /redis
+
+logging:
+  level:
+    root: info
+    org:
+      springframework:
+        security: error
+        web: debug
+    com:
+      jasper: debug
+    io:
+      grpc: INFO
+spring:
+  data:
+    redis:
+      database: 0
+      host: redis
+      port: 6379

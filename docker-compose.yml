@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  redis-demo-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "10001:10001"
+    depends_on:
+      - redis
+    entrypoint: ["java", "-jar", "redisDemo.jar", "--spring.profiles.active=dev"]
+
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - "6380:6379"
